@@ -2,24 +2,16 @@
 	import { onMount } from 'svelte'
 	import Fa from 'svelte-fa';
 	import { faEye, faQuestion } from '@fortawesome/free-solid-svg-icons';
-	import ConfettiGenerator from "confetti-js";
+	import ConfettiGenerator from 'confetti-js';
 
 	import fetch from 'node-fetch';
 
 	import Result from './components/Result.svelte';
 	import BuiltBy from './components/BuiltBy.svelte';
 
-	const githubUsers = [
-		"sindresorhus",
-		"kentcdodds",
-		"wesbos",
-		"gvanrossum",
-		"abramov",
-		"Rich-harris",
-		"szmarczak",
-		"ry",
-		"egoist"
-	].sort(() => Math.random() - 0.5);
+	import { getShowcaseUsernames } from './users'
+
+	const githubUsers = getShowcaseUsernames();
 
 	let confetti;
 	function initConfetti() {

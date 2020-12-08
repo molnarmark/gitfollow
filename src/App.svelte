@@ -87,8 +87,8 @@
 </script>
 
 <div>
-	<canvas id="confetti"></canvas>
 	<div id="waves"></div>
+	<canvas id="confetti"></canvas>
 	<div id="container">
 		<div id="logo"><span class="green">Git</span>Follow</div>
 		<span class="tag-line">does..</span>
@@ -117,18 +117,21 @@
 .tag-line {
 	font-size: 40px;
 	margin-bottom: 20px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 
 #waves {
 	width: 100vw;
 	height: 100vh;
 	background: url('pattern.jpg');
-	mix-blend-mode: overlay;
 	background-repeat: repeat;
-	background-position: top;
+	background-position: left top;
 	pointer-events: none;
 	position: absolute;
-	opacity: 0.1;
+	opacity: 0.4;
 	z-index: 1;
 }
 
@@ -182,7 +185,10 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-}
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;}
 
 .input-element {
 	height: 70px;
@@ -220,7 +226,10 @@
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 600;
 	margin-bottom: 100px;
-}
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;}
 
 #logo .green {
 	color: #109a48;

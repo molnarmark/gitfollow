@@ -1,13 +1,13 @@
 <script>
 	import Fa from 'svelte-fa';
-	import { faFrown, faCheck } from '@fortawesome/free-solid-svg-icons';
+	import { faFrown, faSmile } from '@fortawesome/free-solid-svg-icons';
 
 	export let follows, user, target;
 </script>
 
 <div>
 	<div id="result" class={follows ? 'yes' : 'no'}>
-		<Fa icon={follows ? faCheck : faFrown} color={follows ? '#49ea24' : '#ea242f'}/>
+		<Fa icon={follows ? faSmile : faFrown} color={follows ? '#49ea24' : '#ea242f'}/>
 		{follows ? 'YES' : 'NO'}
 	</div>
 	<small><a href="https://github.com/{user}">{user}</a> {follows ? 'follows' : 'does not follow' } <a href="https://github.com/{target}">{target}</a></small>

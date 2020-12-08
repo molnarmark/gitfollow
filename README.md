@@ -10,7 +10,7 @@ GitFollow is a tool that let's you check if a GitHub user follows another one an
 
 ## ❓ Why
 
-I was curious and wanted to see if some people followed eachother, however, these people had too many followers to manually browse through.
+I was curious and wanted to see if some people followed each other, however, these people had too many followers to manually browse through.
 
 Since GitHub doesn't provide a search feature for followers, this app was built.
 

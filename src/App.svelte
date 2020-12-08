@@ -1,5 +1,5 @@
 <script>
-	import { onMount } from 'svelte'
+	import { onMount } from 'svelte';
 	import Fa from 'svelte-fa';
 	import { faEye, faQuestion } from '@fortawesome/free-solid-svg-icons';
 	import ConfettiGenerator from 'confetti-js';
@@ -39,7 +39,7 @@
 	let placeholder = githubUsers[placeholderSwitcher.current];
 
 	let focused = false;
-	const onFocus =()=> {
+	const onFocus = () => {
 		focused = true;
 		placeholder = '';
 	};
@@ -99,7 +99,7 @@
 </script>
 
 <div on:keydown={handleEnter}>
-	<div id="waves"></div>
+	<div id="pattern-overlay"></div>
 	<canvas id="confetti"></canvas>
 	<div id="container">
 		<div id="logo"><span class="green">Git</span>Follow</div>
@@ -136,7 +136,7 @@
 	user-select: none;
 }
 
-#waves {
+#pattern-overlay {
 	width: 100vw;
 	height: 100vh;
 	background: url('pattern.jpg');

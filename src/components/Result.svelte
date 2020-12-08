@@ -2,7 +2,7 @@
 	import Fa from 'svelte-fa';
 	import { faFrown, faCheck } from '@fortawesome/free-solid-svg-icons';
 
-	export let follows;
+	export let follows, user, target;
 </script>
 
 <div>
@@ -10,7 +10,7 @@
 		<Fa icon={follows ? faCheck : faFrown} color={follows ? '#49ea24' : '#ea242f'}/>
 		{follows ? 'YES' : 'NO'}
 	</div>
-	<small><a href="">github</a> {follows ? 'follows' : 'does not follow' } <a href="">molnarmark</a></small>
+	<small><a href="https://github.com/{user}">{user}</a> {follows ? 'follows' : 'does not follow' } <a href="https://github.com/{target}">{target}</a></small>
 </div>
 
 <style>
@@ -27,5 +27,9 @@
 
 	#result.no {
 		color: #ea242f;
+	}
+
+	small {
+		width: 100%;
 	}
 </style>

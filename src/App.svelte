@@ -84,9 +84,15 @@
 	function reset() {
 		doesFollow = null;
 	}
+
+	function handleEnter(event) {
+		if (event.code === 'Enter') {
+			check();
+		}
+	}
 </script>
 
-<div>
+<div on:keyup={handleEnter}>
 	<div id="waves"></div>
 	<canvas id="confetti"></canvas>
 	<div id="container">

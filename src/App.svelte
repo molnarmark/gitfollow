@@ -252,6 +252,9 @@
 .switch-names {
 	margin-top: 20px;
 	text-decoration: underline;
+	width: 100%;
+	text-align: center;
+	margin-bottom: 50px;
 }
 
 .switch-names:hover {
@@ -287,6 +290,20 @@
 	#logo {
 		font-size: 50px;
 		margin-bottom: 30px;
+	}
+
+	.switch-names {
+		margin-bottom: 80px;
+	}
+
+	#container #check-button {
+		width: 80%;
+	}
+}
+
+@media (max-width: 280px) {
+	#container #check-button {
+		width: 60%;
 	}
 }
 </style>

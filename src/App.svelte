@@ -88,6 +88,14 @@
 			check();
 		}
 	}
+
+	function switchNames() {
+		const origTarget = target;
+		target = user;
+		user = origTarget;
+
+		check();
+	}
 </script>
 
 <div on:keydown={handleEnter}>
@@ -112,6 +120,7 @@
 		</div>
 		{#if doesFollow !== null}
 		<Result follows={doesFollow} user={user} target={target}/>
+		<div class="switch-names" on:click={switchNames}>Check if {target} follows {user}?</div>
 		{/if}
 		<BuiltBy />
 	</div>
@@ -238,6 +247,15 @@
 #logo .green {
 	color: #109a48;
 	font-weight: 900;
+}
+
+.switch-names {
+	margin-top: 20px;
+	text-decoration: underline;
+}
+
+.switch-names:hover {
+	cursor: pointer;
 }
 
 @media (max-width: 1024px) {

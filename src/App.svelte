@@ -236,7 +236,6 @@
 
 #logo {
 	font-size: 80px;
-	font-family: 'Montserrat', sans-serif;
 	font-weight: 600;
 	margin-bottom: 100px;
 	-webkit-user-select: none;

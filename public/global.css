@@ -13,3 +13,12 @@
 body {
 	background: #030613;
 }
+
+a {
+	color: white;
+}
+
+a:hover,
+a:visited {
+	color: white;
+}

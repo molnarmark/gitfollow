@@ -88,6 +88,7 @@
 
 <div>
 	<canvas id="confetti"></canvas>
+	<div id="waves"></div>
 	<div id="container">
 		<div id="logo"><span class="green">Git</span>Follow</div>
 		<span class="tag-line">does..</span>
@@ -118,6 +119,19 @@
 	margin-bottom: 20px;
 }
 
+#waves {
+	width: 100vw;
+	height: 100vh;
+	background: url('pattern.jpg');
+	mix-blend-mode: overlay;
+	background-repeat: repeat;
+	background-position: top;
+	pointer-events: none;
+	position: absolute;
+	opacity: 0.1;
+	z-index: 1;
+}
+
 #confetti {
 	position: absolute;
 	width: 100vw;
@@ -133,6 +147,8 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	position: relative;
+	z-index: 2;
 }
 
 #container #check-button {

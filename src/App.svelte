@@ -16,7 +16,14 @@
 	let confetti;
 	function initConfetti() {
 		const confettiElement = document.getElementById('confetti');
-		const confettiSettings = { target: confettiElement, respawn: false, size: 2, max: 150, clock: 120, start_from_edge: true};
+		const confettiSettings = {
+			target: confettiElement,
+			respawn: false,
+			size: 2,
+			max: 150,
+			clock: 120,
+			start_from_edge: true
+		};
 		confetti = new ConfettiGenerator(confettiSettings);
 	}
 
@@ -52,9 +59,8 @@
 	setInterval(switchExamples, 2000);
 
 	let user, target;
-
 	let doesFollow = null;
-	// Check if user follows the another user
+
 	async function check() {
 		if (!user || !target) return;
 		const endpoint = `https://api.github.com/users/${user}/following/${target}`;
@@ -84,7 +90,7 @@
 	}
 </script>
 
-<div on:keyup={handleEnter}>
+<div on:keydown={handleEnter}>
 	<div id="waves"></div>
 	<canvas id="confetti"></canvas>
 	<div id="container">
@@ -92,14 +98,14 @@
 		<span class="tag-line">does..</span>
 		<div id="inputs">
 			<div class="input-element">
-				<input spellcheck="false" type="text" name="1" placeholder={placeholder} on:focus={onFocus} on:blur={onBlur} bind:value={user} on:input={reset}>
+				<input spellcheck="false" type="text" placeholder={placeholder} on:focus={onFocus} on:blur={onBlur} bind:value={user} on:input={reset}>
 			</div>
 			<div class="follows-icon">
 				<span><Fa color="#169192" icon={faEye} size="2x"/></span>
 				FOLLOW
 			</div>
 			<div class="input-element">
-				<input spellcheck="false" type="text" name="1" placeholder="molnarmark" bind:value={target} on:input={reset}>
+				<input spellcheck="false" type="text" placeholder="molnarmark" bind:value={target} on:input={reset}>
 			</div>
 			<div class="question-icon"><Fa icon={faQuestion} color="#169192" size="2x"/></div>
 			<button id="check-button" on:click={check}>check</button>

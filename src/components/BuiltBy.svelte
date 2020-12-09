@@ -1,5 +1,6 @@
 <div id="built-by">
-	👋 Built by <a href="https://github.com/molnarmark">Mark Molnar</a>
+	<span>👋 Built by<a href="https://github.com/molnarmark">Mark Molnar</a></span>
+<span>✨ Source on<a href="https://github.com/molnarmark/gitfollow">GitHub</a></span>
 </div>
 
 <style>
@@ -14,9 +15,14 @@
 	color: white;
 	font-weight: normal;
 	margin-bottom: 10px;
+	flex-wrap: wrap;
 }
 
-#built-by a {
+#built-by span {
+	margin: 0 10px;
+}
+
+#built-by span a {
 	margin-left: 10px;
 }
 
